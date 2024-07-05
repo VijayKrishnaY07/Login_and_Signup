@@ -12,7 +12,7 @@ const Login = () => {
 
     try {
       let res = await axios.post(
-        "https://login-and-signup-server-qtg2.onrender.com/api/login",
+        "https://login-and-signup-server-1.onrender.com/api/login",
         { email, password }
       );
       if (res.data) {

@@ -12,7 +12,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://login-and-signup-server-qtg2.onrender.com/api/users",
+        "https://login-and-signup-server-1.onrender.com/api/users",
         { username, email, password }
       );
       if (res.data) {
