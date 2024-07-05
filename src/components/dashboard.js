@@ -1,7 +1,13 @@
 import React from "react";
+import Logout from "./logout";
 
-function dashboard() {
-  return <div>Welcome You are logged in successfully!</div>;
-}
+const Dashboard = () => {
+  return (
+    <>
+      <h1>Welcome to Dash Board</h1>
+      <Logout />
+    </>
+  );
+};
 
-export default dashboard;
+export default Dashboard;

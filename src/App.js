@@ -2,17 +2,21 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/login";
 import Signup from "./components/signup";
-import dashboard from "./components/dashboard";
+import Dashboard from "./components/dashboard";
+import PrivateRoute from "./components/privateroute";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>Welcome to Registration Form</h1>
         <Routes>
           <Route path="/login" Component={Login} />
+          <Route path="/" Component={Signup} />
           <Route path="/signup" Component={Signup} />
-          <Route path="/dashboard" Components={dashboard} />
+          <Route
+            path="/dashboard"
+            element={<PrivateRoute element={Dashboard} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

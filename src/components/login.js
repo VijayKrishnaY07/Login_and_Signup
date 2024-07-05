@@ -13,6 +13,8 @@ const Login = () => {
     try {
       let res = await axios.post("/api/login", { email, password });
       if (res.data) {
+        //Save token to localstorage
+        localStorage.setItem("token", res.data.token);
         //Handle successfull Login
         navigate("/dashboard");
       }
@@ -23,6 +25,7 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Login Page</h2>
       <div>
         <label>Email : </label>
         <input
