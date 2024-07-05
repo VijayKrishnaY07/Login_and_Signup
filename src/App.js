@@ -4,6 +4,8 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Dashboard from "./components/dashboard";
 import PrivateRoute from "./components/privateroute";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 
 const App = () => {
   return (

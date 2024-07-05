@@ -24,34 +24,46 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Login Page</h2>
-      <div>
-        <label>Email : </label>
-        <input
-          type="email"
-          value={email}
-          placeholder="Please enter your email address"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          required
-        />
+    <div className="container mt-5">
+      <div className="row justify-center"></div>
+      <div className="col-md-6">
+        <div className="card">
+          <div className="card-body">
+            <h2 className="card-title text-center mb-4">Login to Prism</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group mb-3">
+                <label>Email : </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  value={email}
+                  placeholder=""
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="form-group mb-3">
+                <label>Password : </label>
+                <input
+                  type="password"
+                  value={password}
+                  placeholder=""
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <button className="btn btn-primary w-100" type="submit">
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>Password : </label>
-        <input
-          type="password"
-          value={password}
-          placeholder="Please enter your password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          required
-        />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+    </div>
   );
 };
 export default Login;

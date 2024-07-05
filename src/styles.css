@@ -1,0 +1,19 @@
+.conatiner {
+  margin-top: 50px;
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.btn {
+  background-color: #007bff;
+  border: none;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
