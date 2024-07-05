@@ -14,7 +14,7 @@ const Login = () => {
       let res = await axios.post("/api/login", { email, password });
       if (res.data) {
         //Handle successfull Login
-        navigate.push("/dashboard");
+        navigate("/dashboard");
       }
     } catch (error) {
       console.log(error);
