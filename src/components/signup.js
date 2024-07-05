@@ -11,7 +11,10 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/users", { username, email, password });
+      const res = await axios.post(
+        "https://login-and-signup-server-qtg2.onrender.com/api/users",
+        { username, email, password }
+      );
       if (res.data) {
         //Handle successfull signup
         navigate("/login");

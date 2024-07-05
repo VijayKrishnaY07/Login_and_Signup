@@ -11,7 +11,10 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      let res = await axios.post("/api/login", { email, password });
+      let res = await axios.post(
+        "https://login-and-signup-server-qtg2.onrender.com/api/login",
+        { email, password }
+      );
       if (res.data) {
         //Save token to localstorage
         localStorage.setItem("token", res.data.token);
